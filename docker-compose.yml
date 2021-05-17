@@ -9,8 +9,8 @@ services:
     depends_on:
       - node-app
   node-app:
-    # we need build in node-app as we are creating a custom image using the local dockerfile
     build: .
+    image: pseudorandomguy/node-app
     environment:
       - PORT=3000
     depends_on:
